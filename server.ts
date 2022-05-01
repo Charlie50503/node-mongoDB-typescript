@@ -35,13 +35,9 @@ const requestListener = async (req: http.IncomingMessage, res: http.ServerRespon
       case "POST":
         try {
           const requestData = JSON.parse(body)
-          console.log("requestData", requestData);
           await postMethod.doPost(requestData)
           await successHandle(req, res)
-          // await errorHandle(req, res, "輸入內容有問題無法登錄")
         } catch (error) {
-          console.log("error", error);
-
           const errorStr = error as string
           if (typeof errorStr !== "string") {
             await errorHandle(req, res, "格式錯誤")
@@ -92,8 +88,6 @@ const requestListener = async (req: http.IncomingMessage, res: http.ServerRespon
           const result = await postMethod.doDeleteOne(id)
           await successHandle(req, res)
         } catch (error) {
-          console.log("error", error);
-
           const errorStr = error as string
           if (typeof errorStr !== "string") {
             await errorHandle(req, res, "格式錯誤")

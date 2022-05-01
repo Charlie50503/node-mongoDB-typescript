@@ -18,8 +18,6 @@ export class PostMethod {
   requiredContent: Array<requiredContentType> = ["name", "tags", "content"]
 
   async doPost(data: postMethodParameter) {
-    console.log("data", data);
-
     return new Promise<boolean>(async (resolve, reject) => {
       try {
         await this.checkRequired(data)
@@ -32,7 +30,6 @@ export class PostMethod {
           creatAt: data?.creatAt,
           likes: data?.likes
         })
-        console.log("result", result);
 
         if (result) resolve(true)
         reject(false)
@@ -64,16 +61,12 @@ export class PostMethod {
         if (!id) reject("沒有請求用id")
         await this.checkRequired(data)
         await this.checkType(data)
-        console.log("checked");
 
         const result = await Post.findByIdAndUpdate(id, data)
-        console.log("update", result);
 
         if (result) resolve(true)
         reject("無此ID")
       } catch (error) {
-        console.log("error", error);
-
         reject(error)
       }
 
