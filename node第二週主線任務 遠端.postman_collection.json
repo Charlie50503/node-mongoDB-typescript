@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "7e188cd6-c4d1-4e84-9614-487cb90d0345",
+		"name": "node第二週主線任務 遠端",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ONE - 請求不正確",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo/",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ONE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/626e494b611b8b4ef27a63d5",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"626e494b611b8b4ef27a63d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"tags\": [],\r\n  \"content\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/20\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST 日期格式不正確",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"tags\": [],\r\n  \"content\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/30\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"更新後\",\r\n  \"tags\": [\"更新後\"],\r\n  \"content\": \"更新後\",\r\n  \"image\": \"更新後\",\r\n  \"creatAt\": \"2022/02/21\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/626e3102edf5eb89fa18ea6e",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"626e3102edf5eb89fa18ea6e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH資料不正確",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name123\": \"更新後\",\r\n  \"tags\": [\"更新後\"],\r\n  \"content\": \"更新後\",\r\n  \"image\": \"更新後\",\r\n  \"creatAt\": \"2022/02/21\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo/626e3102edf5eb89fa18ea6e",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						"626e3102edf5eb89fa18ea6e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確-內容type不正確",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": 1,\r\n  \"tags\": [\"www\"],\r\n  \"content\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/28\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name123\": \"string\",\r\n  \"tags\": [],\r\n  \"content\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/20\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"tags123\": [],\r\n  \"content\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/20\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"tags\": [],\r\n  \"content123\": \"string\",\r\n  \"image\": \"string\",\r\n  \"creatAt\": \"2022/02/20\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST資料不正確5不影響",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"tags\": [],\r\n  \"content\": \"string\",\r\n  \"image123123\": \"string\",\r\n  \"creatAt\": \"2022/02/20\",\r\n  \"likes\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://damp-ridge-34856.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"damp-ridge-34856",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
