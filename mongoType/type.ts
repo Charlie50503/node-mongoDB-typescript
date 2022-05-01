@@ -1,0 +1,1 @@
+export type ObjectID = typeof import("mongodb").ObjectID;
